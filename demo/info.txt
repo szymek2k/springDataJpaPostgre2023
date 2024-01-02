@@ -1,0 +1,6 @@
+1) plik drivers/setc/hosts
+34.228.211.243  registry-1.docker.io/v2/
+
+2)
+https://bd90.pl/docker-volume-przechowywanie-danych-poza-kontenerem/
+https://medium.com/@aedemirsen/execute-sql-commands-at-postgresql-db-startup-with-docker-2be0abadec48
