@@ -1,3 +1,6 @@
+kurs https://www.youtube.com/watch?v=-hbHgbbqX2Y&t=764s
+Spring Data JPA + PostgreSQL. itvdn
+
 1) plik drivers/setc/hosts
 34.228.211.243  registry-1.docker.io/v2/
 
@@ -6,6 +9,13 @@ https://bd90.pl/docker-volume-przechowywanie-danych-poza-kontenerem/
 https://medium.com/@aedemirsen/execute-sql-commands-at-postgresql-db-startup-with-docker-2be0abadec48
 
 3) wsl docker-compose up --remove-orphans
+wsl docker-compose up -d
+'-d' -> Detached mode: Run containers in the background
+
+folder z plikiem compose.yaml
+wsl docker-compose up -d
+wsl docker-compose start/stop
+wsl -u root docker-compose down --rmi all -v
 4)
 9
 
