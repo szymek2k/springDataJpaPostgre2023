@@ -1,16 +1,16 @@
-version: '3.8'
+version: "3.8"
 services:
   db:
     image: postgres:16-alpine
-  postgres:
-#    image: 'postgres:latest'
+#  postgres:
+#    image: postgres:latest
     environment:
-      - POSTGRES_DB=${POSTGRES_DB}
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_ROOT_PASSWORD=${POSTGRES_ROOT_PASSWORD}
+      - POSTGRES_DB=$POSTGRES_DB
+      - POSTGRES_USER=$POSTGRES_USER
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+      - POSTGRES_ROOT_PASSWORD=$POSTGRES_ROOT_PASSWORD
     ports:
-      - '13551:5432'
-    volumes:
-      - ./postgres/data:/var/lib/postgresql/data
-      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - "13551:5432"
+#    volumes:
+#      - ./postgres/data:/var/lib/postgresql/data
+#      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql

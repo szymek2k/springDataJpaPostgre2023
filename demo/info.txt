@@ -4,3 +4,36 @@
 2)
 https://bd90.pl/docker-volume-przechowywanie-danych-poza-kontenerem/
 https://medium.com/@aedemirsen/execute-sql-commands-at-postgresql-db-startup-with-docker-2be0abadec48
+
+3) wsl docker-compose up --remove-orphans
+4)
+9
+
+There are 2 options: use an existing image OR tell the docker-compose to build it. If both are specified, then Compose names the built image with the jupyter/base-notebook:latest.
+
+If you want to use the jupyter/base-notebook:latest image as is, remove the build: section from your compose file and keep the image::
+
+version: "3.7"
+
+services:
+  notebook:
+    image: jupyter/base-notebook:latest
+    ports:
+      - "3010:8888"
+    volumes:
+      - "./notebooks:/home/appuser/work"
+If you want to build a custom image, give it a name that does not conflict with the official image name(preferably) and provide a build context:
+
+services:
+  notebook:
+    build:
+      context: ./<dir-that-contains-the-dockerfile>
+      dockerfile: Dockerfile
+      args:
+        - NB_USER=appuser
+        - NB_UID=1001
+        - NB_GID=101
+    image: <repo>/<img-name>:<tag>
+5) 
+https://codereviewvideos.com/postgres-16-docker-workaround-program-postgres-is-needed-by-initdb/
+https://staxmanade.com/2016/05/how-to-get-environment-variables-passed-through-docker-compose-to-the-containers/
