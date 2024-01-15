@@ -6,7 +6,7 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
         <changeSet id="init_db_with_dump" author="marcin">
-            <sqlFile path="db/dump/dump.sql"></sqlFile>
+            <sqlFile path="db/changelog/dump/dump.sql"></sqlFile>
         </changeSet>
 
 </databaseChangeLog>

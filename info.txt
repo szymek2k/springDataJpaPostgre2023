@@ -16,6 +16,9 @@ folder z plikiem compose.yaml
 wsl docker-compose up -d
 wsl docker-compose start/stop
 wsl -u root docker-compose down --rmi all -v
+
+wsl -l -v
+wsl -u root/etc/init-wsl
 4)
 9
 
