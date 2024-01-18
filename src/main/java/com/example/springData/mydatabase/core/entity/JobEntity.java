@@ -16,9 +16,9 @@ import java.util.Objects;
 @NoArgsConstructor
 public class JobEntity {
     @Basic
-    @Column(name = "company_name", nullable = true, length = 255)
+    @Column(name = "company_name", nullable = false, length = 255)
     @Enumerated(EnumType.STRING)
-    private Company companyName;
+    private Company company;
     @Basic
     @Column(name = "experience", nullable = true, precision = 0)
     private Double experience;

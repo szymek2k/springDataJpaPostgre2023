@@ -1,5 +1,6 @@
 package com.example.springData.jpa.demo.demo;
 
+import com.example.springData.mydatabase.core.service.JobService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
