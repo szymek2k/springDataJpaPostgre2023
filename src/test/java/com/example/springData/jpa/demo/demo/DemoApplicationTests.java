@@ -16,5 +16,15 @@ class DemoApplicationTests {
 		var result= jobService.getAllJobs();
 		Assertions.assertFalse(result.isEmpty());
 	}
+	@Test
+	void test_get_all_job_with_repository_success() {
+		var result= jobService.getAllJobs();
+		Assertions.assertFalse(result.isEmpty());
+	}
+	@Test
+	void test_find_all_jobs_by_title_success() {
+		var result= jobService.findAllJobs("anager");
+		Assertions.assertFalse(result.isEmpty());
+	}
 
 }

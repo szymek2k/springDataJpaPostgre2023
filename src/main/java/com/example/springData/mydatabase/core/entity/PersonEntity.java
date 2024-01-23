@@ -13,6 +13,10 @@ import java.util.Objects;
 @Table(name = "person", schema = "public", catalog = "mydatabase")
 @Data
 public class PersonEntity {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column(name = "id", nullable = false)
+    private Long id;
     @Basic
     @Column(name = "email", nullable = true, length = 100)
     private String email;
@@ -25,10 +29,6 @@ public class PersonEntity {
     @Basic
     @Column(name = "phone_number", nullable = true, length = 100)
     private String phoneNumber;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    @Column(name = "id", nullable = false)
-    private Long id;
     @OneToMany(mappedBy = "person")
     @ToString.Exclude
     @EqualsAndHashCode.Exclude

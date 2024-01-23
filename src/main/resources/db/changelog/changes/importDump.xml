@@ -6,10 +6,13 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
 <!--        <changeSet id="init_db_with_dump" author="marcin">-->
-<!--            <sqlFile path="db/changelog/dump/initState.sql"></sqlFile>-->
+<!--            <sqlFile path="db/changelog/dump/0.0.1_initSchema.sql"></sqlFile>-->
 <!--        </changeSet>-->
 
-    <include file="db/changelog/dump/initState.sql" ></include>
+<!--    <include file="/db/changelog/init/0.0.1_initSchema.sql" ></include>-->
+<!--    <include file="/db/changelog/init/insertSampleData" ></include>-->
+    <include file="/db/changelog/init/0.0.1_initSchema.sql"></include>
+    <include file="/db/changelog/init/0.0.2_insertSampleData.sql"></include>
     <includeAll path="version/0.0.1" relativeToChangelogFile="true"></includeAll>
 
 </databaseChangeLog>
