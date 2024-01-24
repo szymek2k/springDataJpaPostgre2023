@@ -1,5 +1,6 @@
 package com.example.springData.mydatabase.core.service;
 
+import com.example.springData.mydatabase.core.entity.Company;
 import com.example.springData.mydatabase.core.entity.JobEntity;
 import com.example.springData.mydatabase.core.repository.JobRepository;
 import lombok.RequiredArgsConstructor;
@@ -31,7 +32,7 @@ public class JobService {
         return jobRepository.findAll();
     }
 
-    public List<JobEntity> findAllJobs(String title) {
-        return jobRepository.findAllByTitleContainsIgnoreCase(title);
+    public List<JobEntity> findAllJobs(Company company, String title) {
+        return jobRepository.findAllByFilter(title, company);
     }
 }
